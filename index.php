@@ -10,7 +10,7 @@
 </head>
 <body >
 <div id="fullpage">
-    <div class="site-wrapper section" data-anchor="block1" style="background-image: url(images/cover.jpg); background-size: cover;">
+    <div class="site-wrapper section" data-anchor="block1" style="background-image: url(images/title.jpg); background-size: cover;">
         <div class="site-wrapper-inner">
             <div class="cover-container">
                 <div class="masthead clearfix">
@@ -18,21 +18,34 @@
                         <h3 class="masthead-brand">РАРИО</h3>
                         <ul id="menu">
                             <li data-menuanchor="block1"><a href="#block1">Главная</a></li>
-                            <li data-menuanchor="block2"><a href="#block2">Деятельность</a></li>
+                            <li data-menuanchor="block2"><a href="#block2">Цель</a></li>
+                            <li data-menuanchor="block3"><a href="#block3">Деятельность</a></li>
+                            <li data-menuanchor="block4"><a href="#block4">Заявка</a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="inner cover">
                     <h1 class="cover-heading">Агентство развития информационного общества РАРИО</h1>
                     <p class="lead">
-                        <br><a href="#" class="btn btn-lg btn-default">Узнать больше</a>
+                        <br><a href="#block2" class="btn btn-lg btn-default">Узнать больше</a>
                     </p>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="advantages section" data-anchor="block2">
+    <div class="advantages section target" data-anchor="block2">
+            <div class="container">
+                <div class="inner cover">
+                    <h1 class="activity">ЦЕЛЬ ОРГАНИЗАЦИИ</h1>
+                    <p class="lead">
+                        Содействие развитию информационного общества и гражданских инициатив в среде пользователей информационных услуг, распространение «лучших практик» создания элементов информационного общества, повышение информационной грамотности и формирование информационной культуры в обществе.
+                    </p>
+                </div>
+            </div>
+    </div>
+
+    <div class="advantages section" data-anchor="block3">
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
                 <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -74,7 +87,7 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img class="third-slide" src="images/GR.jpg" alt="Third slide">
+                    <img class="third-slide" src="images/GR.jpg" alt="Fourth slide">
                     <div class="container">
                         <div class="carousel-caption">
                             <h1 class="activity">СФЕРЫ ДЕЯТЕЛЬНОСТИ</h1>
@@ -84,7 +97,7 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img class="third-slide" src="images/NIR.jpg" alt="Third slide">
+                    <img class="third-slide" src="images/NIR.jpg" alt="Fifth slide">
                     <div class="container">
                         <div class="carousel-caption">
                             <h1 class="activity">СФЕРЫ ДЕЯТЕЛЬНОСТИ</h1>
@@ -94,7 +107,7 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img class="third-slide" src="images/business.jpg" alt="Third slide">
+                    <img class="third-slide" src="images/business.jpg" alt="Sixth slide">
                     <div class="container">
                         <div class="carousel-caption">
                             <h1 class="activity">СФЕРЫ ДЕЯТЕЛЬНОСТИ</h1>
@@ -112,6 +125,48 @@
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="sr-only">Next</span>
             </a>
+        </div>
+    </div>
+
+    <div class="advantages section" data-anchor="block4">
+        <div class="container">
+            <div class="inner cover application">
+                    <h2>Оставить заявку на предоставление услуги</h2><br>
+
+                    <form role="form" id="contactForm">
+                        <div class="row">
+                            <div class="form-group col-sm-6 contact-form">
+                                <label for="name" class="h5">Имя</label>
+                                <input type="text" class="form-control" id="name" placeholder="Введите имя" required>
+                                <label for="lastnamename" class="h5">Фамилия</label>
+                                <input type="text" class="form-control" id="lastname" placeholder="Введите фамилию" required>
+                                <label for="surname" class="h5">Отчество</label>
+                                <input type="text" class="form-control" id="surname" placeholder="Введите отчество" required>
+                            </div>
+                            <div class="form-group col-sm-6 contact-form">
+                                <label for="email" class="h5">Email</label>
+                                <input type="email" class="form-control" id="email" placeholder="Введите email адрес" required>
+                                <label for="phone" class="h5">Телефон</label>
+                                <input type="text" class="form-control" id="phone" placeholder="Укажите номер телефона" required>
+                                <label for="list" class="h5">Услуга</label>
+                                <select type="text" class="form-control" id="list">
+                                    <option>Разработка и экспертиза</option>
+                                    <option>Мероприятия</option>
+                                    <option>Исследования</option>
+                                    <option>GR-проекты</option>
+                                    <option>НИР и НИОКР</option>
+                                    <option>Разработки</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group contact-form">
+                            <label for="message" class="h5 ">Текст заявки</label>
+                            <textarea id="message" class="form-control" rows="5" placeholder="Кратко укажите требования к услуге" required></textarea>
+                        </div>
+                        <button type="submit" id="form-submit" class="btn btn-success btn-lg pull-right ">Отправить</button>
+<!--                        <div id="msgSubmit" class="h3 text-center hidden">Сообщение отправлено!</div>-->
+                    </form>
+            </div>
         </div>
     </div>
 </div>
