@@ -1,0 +1,249 @@
+/* stylelint-disable selector-list-comma-newline-after */
+.jumbotron{
+    margin-top: 30px;
+    text-align: center;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    text-shadow: 2px 2px #000;
+}
+
+.bg-cover {
+    background-size: cover;
+    color: white;
+    background-position: center center;
+    position: relative;
+}
+
+.blog-header {
+    line-height: 1;
+    border-bottom: 1px solid #e5e5e5;
+    position: fixed;
+    padding-top: 100px;
+}
+
+.blog-header-logo {
+    font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+    font-size: 2.25rem;
+}
+
+.blog-header-logo:hover {
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+}
+
+.display-4 {
+    font-size: 2.5rem;
+}
+@media (min-width: 768px) {
+    .display-4 {
+        font-size: 3rem;
+    }
+}
+
+.nav-scroller {
+    position: relative;
+    z-index: 2;
+    height: 2.75rem;
+    overflow-y: hidden;
+}
+
+.nav-scroller .nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    padding-bottom: 1rem;
+    margin-top: -1px;
+    overflow-x: auto;
+    text-align: center;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+}
+
+.nav-scroller .nav-link {
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+    font-size: .875rem;
+}
+
+.card-img-right {
+    height: 100%;
+    border-radius: 0 3px 3px 0;
+}
+
+.flex-auto {
+    -ms-flex: 0 0 auto;
+    -webkit-box-flex: 0;
+    flex: 0 0 auto;
+}
+
+.h-250 { height: 250px; }
+@media (min-width: 768px) {
+    .h-md-250 { height: 250px; }
+}
+
+.border-top { border-top: 1px solid #e5e5e5; }
+.border-bottom { border-bottom: 1px solid #e5e5e5; }
+
+.box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
+
+/*
+ * Blog name and description
+ */
+.blog-title {
+    margin-bottom: 0;
+    font-size: 2rem;
+    font-weight: 400;
+}
+.blog-description {
+    font-size: 1.1rem;
+    color: #999;
+}
+
+@media (min-width: 40em) {
+    .blog-title {
+        font-size: 3.5rem;
+    }
+}
+
+/* Pagination */
+.blog-pagination {
+    margin-bottom: 4rem;
+}
+.blog-pagination > .btn {
+    border-radius: 2rem;
+}
+
+/*
+ * Blog posts
+ */
+.blog-post {
+    margin-bottom: 4rem;
+}
+.blog-post-title {
+    margin-bottom: .25rem;
+    font-size: 2.5rem;
+}
+.blog-post-meta {
+    margin-bottom: 1.25rem;
+    color: #999;
+}
+
+/*
+ * Footer
+ */
+
+footer{
+    color:#ccc;
+    font-size:12px;
+    padding: 10px;
+    position: relative;
+    z-index:-2;
+    background-color:#31353a;
+    background-image:-webkit-linear-gradient(top, #31353a, #2f3337);
+    background-image:-moz-linear-gradient(top, #31353a, #2f3337);
+    background-image:linear-gradient(top, #31353a, #2f3337);
+}
+
+/* Set a width to the outermost UL and center it */
+
+/* The four columns of links */
+
+/* The links */
+
+footer > ul > li ul li{
+    margin-left:43px;
+    text-transform: uppercase;
+    font-weight:bold;
+}
+
+
+/* The company logo */
+
+footer a.logo{
+    color: #e4e4e4 !important;
+    text-decoration: none !important;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-left: 16px;
+    display: inline-block;
+}
+
+footer a.logo i{
+    font-style: normal;
+    position: absolute;
+    width: 60px;
+    display: block;
+    left: 48px;
+    font-size: 12px;
+    color: #999;
+}
+
+/*-------------------------
+	The different colors
+--------------------------*/
+
+.form-signin {
+    max-width: 330px;
+    margin: 0 auto;
+    margin-bottom: 12%;
+    margin-top: 12.2%;
+}
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+    margin-bottom: 10px;
+}
+.form-signin .checkbox {
+    font-weight: normal;
+}
+.form-signin .form-control {
+    position: relative;
+    height: auto;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 16px;
+}
+.form-signin .form-control:focus {
+    z-index: 2;
+}
+.form-signin input[type="email"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+    margin-bottom: -1px;
+     border-top-left-radius: 0;
+     border-top-right-radius: 0;
+ }
+.form-signin input[type="conf-password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+.navbar{
+    margin-bottom: 0px;
+}
+.nav{
+    background-color: #333;
+    min-height: 632px;
+}
+.nav li{
+    width: 100%;
+}
+.nav li a{
+    color: white;
+    font-size: 1.8em;
+}
+.nav li a:hover{
+    color: #1b1e21;
+    background-color: white;
+
+}

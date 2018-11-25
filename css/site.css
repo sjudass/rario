@@ -179,8 +179,8 @@ body {
     color: #333;
     text-shadow: 0 0px 0px;
 }
-.hidden{
-    opacity: 0;
+#msgSubmit{
+    display: none;
 }
 .submit #form-submit{
     float: right;
