@@ -7,6 +7,7 @@
     <title>Агентство РАРИО</title>
     <link href="css/site.css" rel="stylesheet">
     <link href="css/bootstrap.css" rel="stylesheet">
+    <script src="js/jquery-3.3.1.min.js"></script>
 </head>
 <body >
 <div id="fullpage">
@@ -21,6 +22,7 @@
                             <li data-menuanchor="block2"><a href="#block2">Цель</a></li>
                             <li data-menuanchor="block3"><a href="#block3">Деятельность</a></li>
                             <li data-menuanchor="block4"><a href="#block4">Заявка</a></li>
+                            <li data-menuanchor="block5"><a href="#block5">Контакты</a></li>
                         </ul>
                     </div>
                 </div>
@@ -37,6 +39,7 @@
     <div class="advantages section target" data-anchor="block2">
             <div class="container">
                 <div class="inner cover">
+                    <br>
                     <h1 class="activity">ЦЕЛЬ ОРГАНИЗАЦИИ</h1>
                     <p class="lead">
                         Содействие развитию информационного общества и гражданских инициатив в среде пользователей информационных услуг, распространение «лучших практик» создания элементов информационного общества, повышение информационной грамотности и формирование информационной культуры в обществе.
@@ -131,25 +134,25 @@
     <div class="advantages section" data-anchor="block4">
         <div class="container">
             <div class="inner cover application">
-                    <h2>Оставить заявку на предоставление услуги</h2><br>
+                    <h2>Заказать услугу</h2><br>
 
-                    <form role="form" id="contactForm">
+                    <form method="post" id="contactForm">
                         <div class="row">
                             <div class="form-group col-sm-6 contact-form">
                                 <label for="name" class="h5">Имя</label>
-                                <input type="text" class="form-control" id="name" placeholder="Введите имя" required>
+                                <input type="text" name="name" class="form-control" id="name" placeholder="Введите имя" required>
                                 <label for="lastnamename" class="h5">Фамилия</label>
-                                <input type="text" class="form-control" id="lastname" placeholder="Введите фамилию" required>
+                                <input type="text" name="lastname" class="form-control" id="lastname" placeholder="Введите фамилию" required>
                                 <label for="surname" class="h5">Отчество</label>
-                                <input type="text" class="form-control" id="surname" placeholder="Введите отчество" required>
+                                <input type="text" name="surname" class="form-control" id="surname" placeholder="Введите отчество" required>
                             </div>
                             <div class="form-group col-sm-6 contact-form">
                                 <label for="email" class="h5">Email</label>
-                                <input type="email" class="form-control" id="email" placeholder="Введите email адрес" required>
+                                <input type="email" name="email" class="form-control" id="email" placeholder="Введите email адрес" required>
                                 <label for="phone" class="h5">Телефон</label>
-                                <input type="text" class="form-control" id="phone" placeholder="Укажите номер телефона" required>
+                                <input type="text" name="phone" class="form-control" id="phone" placeholder="Укажите номер телефона" required>
                                 <label for="list" class="h5">Услуга</label>
-                                <select type="text" class="form-control" id="list">
+                                <select type="text" name="list" class="form-control" id="list">
                                     <option>Разработка и экспертиза</option>
                                     <option>Мероприятия</option>
                                     <option>Исследования</option>
@@ -161,27 +164,27 @@
                         </div>
                         <div class="form-group contact-form">
                             <label for="message" class="h5 ">Текст заявки</label>
-                            <textarea id="message" class="form-control" rows="5" placeholder="Кратко укажите требования к услуге" required></textarea>
+                            <input id="message" name="message" class="form-control" placeholder="Кратко укажите требования к услуге" required>
                         </div>
-                        <button type="submit" id="form-submit" class="btn btn-success btn-lg pull-right ">Отправить</button>
-<!--                        <div id="msgSubmit" class="h3 text-center hidden">Сообщение отправлено!</div>-->
+                        <div class="form-group submit">
+                            <h3 id="msgSubmit" class="hidden">Сообщение отправлено!</h3>
+                            <button type="submit" id="form-submit" class="btn btn-success btn-lg pull-right button-submit">Отправить</button>
+                        </div>
                     </form>
             </div>
         </div>
     </div>
 </div>
 
-<footer class="footer">
-    <div class="container">
-        <p class="pull-left">&copy; Агентство развития информационного общества РАРИО <?= date('Y') ?></p>
-    </div>
-</footer>
+
+
+
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="js/jquery.fullPage.min.js"></script>
-<script src="js/script.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
 <script>
     $(document).ready(function() {
         $('#fullpage').fullpage({
@@ -189,6 +192,30 @@
             menu: '#menu',
             css3: true,
             scrollingSpeed: 1000
+        });
+    });
+
+    $(document).ready(function () {
+        $('form').submit(function (event) {
+            event.preventDefault();
+
+            $.ajax({
+                type: "POST",
+                url: "form-process.php",
+                data:
+                    $(this).serialize(),
+                cache: false,
+                processData: false,
+                success: function (result){
+                    if (result){
+                        alert('Заявка успешно отправлена');
+                    }
+                    else{
+//                        $(this).clearInputs();
+                        $("#msgSubmit").removeClass();
+                    }
+                }
+            });
         });
     });
 </script>

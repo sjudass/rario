@@ -179,6 +179,15 @@ body {
     color: #333;
     text-shadow: 0 0px 0px;
 }
+.hidden{
+    opacity: 0;
+}
+.submit #form-submit{
+    float: right;
+}
+.submit #msgSubmit{
+    float: left;
+}
 .contact-form{
     text-align: left;
 }
@@ -216,7 +225,8 @@ body {
 
 }
 .activity {
-    margin-bottom: 450px;
+    margin-bottom: 430px;
+    margin-top: 10px;
 }
 
 #menu {

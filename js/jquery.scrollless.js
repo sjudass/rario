@@ -13,7 +13,7 @@
 
 // Options:
 var iPosInit = 0;
-var nMaxDepth = 5;
+var nMaxDepth = 6;
 var hQuota = 0;
 var nTimePostpone = 500;
 var bAutoRestore = true;
