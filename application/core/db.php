@@ -1,9 +1,9 @@
 <?php
 class Database
 {
-    public $host = '127.0.0.1';
+    public $host = 'localhost';
 
-    public $db = 'blog';
+    public $db = 'rario';
 
     public $user = 'root';
 

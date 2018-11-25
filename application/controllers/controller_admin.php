@@ -14,6 +14,14 @@ class Controller_admin extends Controller
     }
     function action_login()
     {
+        Auth::checkAuth();
+        if ($_SERVER["REQUEST_METHOD"] == 'POST'){
+            $admin = Auth::login($_POST['login'], $_POST['password']);
+            if ($admin) {
+                $_SESSION['admin'] = $admin;
+                header('Location: http://rario/admin');
+            }
+        }
         $this->view->generate('login_view.php');
     }
 }
