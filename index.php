@@ -174,6 +174,39 @@
             </div>
         </div>
     </div>
+    <div class="advantages section" data-anchor="block5" style="background-color: #1b1e21">
+        <div class="container" style="margin-top: 100px">
+            <div class="inner-cover">
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                        <h1>Контакты</h1>
+                        <p>
+                            Адрес РАРИО:<br>
+                            109012, Москва, Ильинка, д. 4<br>
+                            Гостиный двор, подъезд 7, оф. 313<br>
+                            <br>
+                            Приемная и аппарат:<br>
+                            109012, Москва, Ильинка, д. 4<br>
+                            Гостиный двор, подъезд 7, оф. 313<br>
+                            <br>
+                            Электронный адрес приемной:<br>
+                            info@rario.ru<br>
+                            <br>
+                            Телефон:<br>
+                            8 (495) 627 6296<br>
+                            <br>
+                            Факс:<br>
+                            8 (495) 627 6296<br>
+                        </p>
+                    </div>
+                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+                        <br>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5263.661661287052!2d37.62227471223599!3d55.75351736277679!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a59c9e2b63d%3A0x8d4031168eaa0ac4!2z0YPQuy4g0JjQu9GM0LjQvdC60LAsIDQsINCc0L7RgdC60LLQsCwgMTA5MDEy!5e0!3m2!1sru!2sru!4v1543142986008" width="500" height="500" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 
