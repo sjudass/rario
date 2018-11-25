@@ -8,4 +8,5 @@ require_once 'core/route.php';
 require_once 'core/db.php';
 require_once 'core/auth.php';
 require_once 'models/model_user.php';
+require_once 'models/model_application.php';
 Route::start(); //Запускаем маршрутизатор

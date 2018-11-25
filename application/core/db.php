@@ -1,7 +1,7 @@
 <?php
 class Database
 {
-    public $host = 'localhost';
+    public $host = '127.0.0.1';
 
     public $db = 'rario';
 

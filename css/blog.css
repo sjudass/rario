@@ -247,3 +247,15 @@ footer a.logo i{
     background-color: white;
 
 }
+
+.nav .active{
+    background-color: white;
+    color: #1b1e21;
+}
+.table{
+    font-size: 1.3em;
+}
+.table-container{
+    height: 630px;
+    overflow: scroll
+}

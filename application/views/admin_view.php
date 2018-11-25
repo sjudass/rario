@@ -16,45 +16,10 @@
 <div class="row" style="width: 100%">
     <nav class="col-md-3" id="menuVertical">
         <ul class="nav">
-            <li><a href="#">Управление пользователями</a></li>
-            <li><a href="#" style="margin-top: -290px">Управление Заявками</a></li>
+            <li><a href="/admin/users">Управление пользователями</a></li>
+            <li><a href="/admin/application" style="margin-top: -290px">Управление Заявками</a></li>
         </ul>
     </nav>
-    <div class="col-md-9">
-        <table class="table table-hover" style="max-height: 733px; font-size: 1.8em">
-            <thead class="table-active">
-            <tr>
-                <th>#</th>
-                <th>Имя пользователя</th>
-                <th>Пароль</th>
-                <th>Права</th>
-                <th></th>
-                <th></th>
-            </tr>
-            </thead>
-            <tbody>
-            <?php  ?>
-            <tr>
-                <th scope="row">{{user.id}}</th>
-                <td>{{user.username}}</td>
-                <td>{{user.password}}</td>
-                <td style="width: 200px">{{user.isAdmin}}</td>
-                <td style="width: 50px">
-                    <ul>
-                        <li><a href="#" style="color: white; background: #333;">Редактировать</a></li>
-                    </ul>
-                </td>
-                <td style="width: 30px">
-                    <ul>
-                        <li><a href="#" style="color: white; background: #333;">Удалить</a></li>
-                    </ul>
-                </td>
-            </tr>
-            {% endfor %}
-
-            </tbody>
-        </table>
-    </div>
 </div>
 <footer class="container-fluid" style="z-index: 1">
     <a class="logo" href="http://www.rario.ru/">&copy; 2018 Агентство развития информационного общества РАРИО</a>
