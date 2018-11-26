@@ -17,7 +17,8 @@
     <nav class="col-md-3" id="menuVertical">
         <ul class="nav">
             <li><a href="/admin/users">Управление пользователями</a></li>
-            <li><a href="/admin/application" style="margin-top: -290px">Управление Заявками</a></li>
+            <li><a href="/admin/application" style="margin-top: -195px">Управление Заявками</a></li>
+            <li><a href="/admin/adduser" style="margin-top: -345px">Добавить пользователя</a></li>
         </ul>
     </nav>
 </div>

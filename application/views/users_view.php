@@ -17,7 +17,8 @@
     <nav class="col-md-3" id="menuVertical">
         <ul class="nav">
             <li><a class="active">Управление пользователями</a></li>
-            <li><a href="/admin/application" style="margin-top: -290px">Управление Заявками</a></li>
+            <li><a href="/admin/application" style="margin-top: -195px">Управление Заявками</a></li>
+            <li><a href="/admin/adduser" style="margin-top: -345px">Добавить пользователя</a></li>
         </ul>
     </nav>
     <div class="col-md-9 table-container">
@@ -46,10 +47,10 @@
                 <td><?= $user['password'];?></td>
                 <td><?= $user['position'];?></td>
                 <td style="width: 50px">
-                    <button href="#" type="submit" class="btn btn-dark btn-lg pull-right button-submit">Редактировать</button>
+                    <a href="/admin/user/<?= $user['id'];?>" class="btn btn-dark btn-lg pull-right button-submit">Редактировать</a>
                 </td>
                 <td style="width: 30px">
-                    <button href="#" type="submit" class="btn btn-dark btn-lg pull-right button-submit">Удалить</button>
+                    <a href="/admin/deleteuser/<?= $user['id'];?>" class="btn btn-dark btn-lg pull-right button-submit">Удалить</a>
                 </td>
             </tr>
             <?php endforeach;}?>

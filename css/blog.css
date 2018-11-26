@@ -259,3 +259,6 @@ footer a.logo i{
     height: 630px;
     overflow: scroll
 }
+.form-control{
+    font-size: 1.3em;
+}

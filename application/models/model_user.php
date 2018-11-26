@@ -12,9 +12,9 @@
         public function getUser($id) {
             $db = new Database();
             $db = $db->connectToPDO();
-            $query = $db->prepare('SELECT * FROM worker WHERE id = ?');
+            $query = $db->prepare('SELECT * FROM `worker` WHERE id = ?');
             $query->execute([$id]);
-            return $query->fetch();
+            return $query->fetchall();
         }
 
         public function addUser($first_name, $last_name, $middle_name, $login, $password, $position) {
@@ -24,12 +24,19 @@
             $query->execute([$first_name, $last_name, $middle_name, $login, $password, $position]);
             return $query->fetch();
         }
-
+        public function updateUser($first_name, $last_name, $middle_name, $login, $password, $position, $id)
+        {
+            $db = new Database();
+            $db = $db->connectToPDO();
+            $query = $db->prepare('UPDATE worker SET first_name = ?, last_name = ?, middle_name = ?, login = ?, password = ?, position = ? WHERE id = ?');
+            $query->execute([$first_name, $last_name, $middle_name, $login, $password, $position, $id]);
+            return $query->fetch();
+        }
         public function deleteUser($id) {
             $db = new Database();
             $db = $db->connectToPDO();
             $query = $db->prepare('DELETE FROM worker WHERE id = ?');
             $query = $query->execute([$id]);
-            return $query->fetch();
+            return $query->fetchall();
         }
     }
