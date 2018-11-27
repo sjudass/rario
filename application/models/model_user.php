@@ -36,7 +36,7 @@
             $db = new Database();
             $db = $db->connectToPDO();
             $query = $db->prepare('DELETE FROM worker WHERE id = ?');
-            $query = $query->execute([$id]);
-            return $query->fetchall();
+            $query->execute([$id]);
+            return $query->fetch();
         }
     }

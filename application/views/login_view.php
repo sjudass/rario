@@ -22,7 +22,7 @@
         <h2 class="form-signin-heading" style="text-align: center; font-size: 3rem">Авторизация</h2>
         <input type="text" class="form-control" name="login" placeholder="Логин" required autofocus>
         <input type="password" class="form-control" name="password" placeholder="Пароль" required>
-        <button class="btn btn-lg btn-primary btn-block" type="submit" style="font-size: 2.25rem; margin-top: 15px">Войти</button>
+        <button class="btn btn-lg btn-primary btn-block" type="submit" style="font-size: 2.25rem; margin-top: 15px; margin-left: 0px;">Войти</button>
     </form>
 </div>
 </body>

@@ -17,47 +17,55 @@
     <nav class="col-md-3" id="menuVertical">
         <ul class="nav">
             <li><a href="/admin/users">Управление пользователями</a></li>
-            <li><a class="active" style="margin-top: -195px">Управление Заявками</a></li>
-            <li><a href="/admin/adduser" style="margin-top: -345px">Добавить пользователя</a></li>
+            <li><a class="active">Управление Заявками</a></li>
+            <li><a href="/admin/adduser">Добавить пользователя</a></li>
+            <li><a href="/admin/logout" style="margin-top: 447px">Выход</a></li>
         </ul>
     </nav>
-    <div class="col-md-9 table-container">
-        <table class="table table-hover">
-            <thead class="table-active">
-            <tr>
-                <th>#</th>
-                <th>Вид услуги</th>
-                <th>Текст обращения</th>
-                <th>Дата создания</th>
-                <th>Статус</th>
-                <th>Дата закрытия</th>
-                <th>Код клиента</th>
-                <th></th>
-                <th></th>
-            </tr>
-            </thead>
-            <tbody>
-            <?php if( isset($applications) && is_array($applications) ) {foreach ($applications as $application):?>
-                <tr>
-                    <th scope="row"><?= $application['id'];?></th>
-                    <td><?= $application['service'];?></td>
-                    <td><?= $application['application_text'];?></td>
-                    <td><?= $application['data_create'];?></td>
-                    <td><?= $application['status'];?></td>
-                    <td><?= $application['closing_date'];?></td>
-                    <td><?= $application['client'];?></td>
-                    <td style="width: 50px">
-                        <button href="#" type="submit" class="btn btn-dark btn-lg pull-right button-submit">Редактировать</button>
-                    </td>
-                    <td style="width: 30px">
-                        <button href="#" type="submit" class="btn btn-dark btn-lg pull-right button-submit">Удалить</button>
-                    </td>
-                </tr>
-            <?php endforeach;}?>
+    <?php if (isset($getapplication)) foreach ($getapplication as $application):?>
+        <form method="post" action="/admin/application/<?= $application['id'];?>" class="col-sm-9">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="form-group col-sm-6 contact-form">
+                        <br>
+                        <h1>Информация о клиенте</h1>
+                        <label class="h3">Имя: <?= $application['first_name'];?></label><br>
+                        <label class="h3">Фамилия: <?= $application['last_name'];?></label><br>
+                        <label class="h3">Отчество: <?= $application['middle_name'];?></label><br>
+                        <label class="h3">Email: <?= $application['email'];?></label><br>
+                        <label class="h3">Номер телефона: <?= $application['phone'];?></label>
+                    </div>
+                    <div class="form-group col-sm-6 contact-form">
+                        <br>
+                        <h1>Информация о заявке</h1>
+                        <label class="h3">Вид услуги: <?= $application['service'];?></label><br>
+                        <label class="h3">Дата обращения: <?= $application['data_create'];?></label><br>
+                        <label class="h3">Текст обращения</label><br>
+                        <pre style="font-size: 1.2em"><?= $application['application_text'];?></pre>
+                        <?php if ($application['status'] == "Выполнена"):?>
+                            <label class="h3">Дата закрытия: <?= $application['closing_date'];?></label>
+                            <div class="form-group submit">
+                                <a href="/admin/applications" class="btn btn-dark btn-lg pull-right button-submit">Назад</a>
+                            </div>
+                        <?php else:?>
+                        <label class="h3">Статус обращения</label><br>
+                        <select type="text" name="status" class="form-control" id="status" style="height: 30px">
+                            <option><?= $application['status'];?></option>
+                            <option>На рассмотрении</option>
+                            <option>Выполнена</option>
+                            <option>Отказано</option>
+                        </select><br>
+                            <div class="form-group submit">
+                                <button id="form-submit" class="btn btn-dark btn-lg pull-right button-submit">Внести изменения</button>
+                                <a href="/admin/applications" class="btn btn-dark btn-lg pull-right button-submit">Назад</a>
+                            </div>
+                        <?php endif;?>
+                    </div>
 
-            </tbody>
-        </table>
-    </div>
+                </div>
+            </div>
+        </form>
+    <? endforeach;?>
 </div>
 <footer class="container-fluid" style="z-index: 1">
     <a class="logo" href="http://www.rario.ru/">&copy; 2018 Агентство развития информационного общества РАРИО</a>

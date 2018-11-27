@@ -144,7 +144,7 @@
                             <label for="lastnamename" class="h5">Фамилия</label>
                             <input type="text" name="lastname" class="form-control" id="lastname" placeholder="Введите фамилию" required>
                             <label for="surname" class="h5">Отчество</label>
-                            <input type="text" name="surname" class="form-control" id="surname" placeholder="Введите отчество" required>
+                            <input type="text" name="surname" class="form-control" id="surname" placeholder="Введите отчество">
                         </div>
                         <div class="form-group col-sm-6 contact-form">
                             <label for="email" class="h5">Email</label>
@@ -164,7 +164,7 @@
                     </div>
                     <div class="form-group contact-form">
                         <label for="message" class="h5 ">Текст заявки</label>
-                        <input id="message" name="message" class="form-control" placeholder="Кратко укажите требования к услуге" required>
+                        <textarea id="message" name="message" class="form-control" rows="5" placeholder="Кратко укажите требования к услуге"></textarea>
                     </div>
                     <div class="form-group submit">
                         <h2 id="msgSubmit" style="color:green;">Заявка отправлена. Ожидайте письмо на почте</h2>
@@ -249,6 +249,7 @@
                         $("#msgSubmit").show('slow');
                         setTimeout(function() { $("#msgSubmit").hide('slow'); }, 3000);
                         $('input').val('');
+                        $('textarea').val('');
                     }
                 }
             });

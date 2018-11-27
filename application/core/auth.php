@@ -20,5 +20,10 @@ class Auth
             header('Location: http://rario/admin/login');
         }
     }
+    public static function checklogin() {
+        if (isset($_SESSION['admin'])) {
+            header('Location: http://rario/admin');
+        }
+    }
 }
 

@@ -17,8 +17,9 @@
     <nav class="col-md-3" id="menuVertical">
         <ul class="nav">
             <li><a class="active">Управление пользователями</a></li>
-            <li><a href="/admin/application" style="margin-top: -195px">Управление Заявками</a></li>
-            <li><a href="/admin/adduser" style="margin-top: -345px">Добавить пользователя</a></li>
+            <li><a href="/admin/applications">Управление Заявками</a></li>
+            <li><a href="/admin/adduser">Добавить пользователя</a></li>
+            <li><a href="/admin/logout" style="margin-top: 447px">Выход</a></li>
         </ul>
     </nav>
     <div class="col-md-9 table-container">
