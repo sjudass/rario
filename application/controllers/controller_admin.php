@@ -24,19 +24,30 @@ class Controller_admin extends Controller
         $application = new Application();
         $getapplication = $application->getApplication($id);
         if ($_SERVER["REQUEST_METHOD"] == 'POST') {
-            if ($_POST['status'] == "Выполнена"){
-                $application->updateApplication($_POST['status'],date("d.m.y"),$id);
-                header("location: http://rario/admin/applications");
+                switch ($_POST['status']){
+                    case "Выполнена":
+                        $application->updateApplication($_POST['status'],date("d.m.y"),$id);
+                        mail($getapplication[0]['email'], "Агентство развития информационного общества РАРИО", "Добрый день," . $getapplication[0]['last_name'] ." ". $getapplication[0]['first_name'] ." ". $getapplication[0]['middle_name'] .
+                            ".\nЗаявка, отправленная вами, успешно выполнена.\nДля получения детальной информации позвоните по телефону: 8 (495) 627 6296.\nСпасибо за обращение.\n\n\n\nСообщение отправлено с сайта: http://rario.ru");
+                        header("location: http://rario/admin/applications");
+                        break;
+                    case "Поступила":
+                        header("location: http://rario/admin/applications");
+                        break;
+                    case "На рассмотрении":
+                        $application->updateApplication($_POST['status'],'',$id);
+                        mail($getapplication[0]['email'], "Агентство развития информационного общества РАРИО", "Добрый день," . $getapplication[0]['last_name'] ." ". $getapplication[0]['first_name'] ." ". $getapplication[0]['middle_name'] .
+                            ".\nЗаявка, которую вы нам отправили, находится на рассмотрении.\nВ ближайшее время сотрудники агентства свяжуться с вами по номеру телефона.\nСпасибо за обращение.\n\n\n\nСообщение отправлено с сайта: http://rario.ru");
+                        header("location: http://rario/admin/applications");
+                        break;
+                    case "Отказано":
+                        $application->updateApplication($_POST['status'],date("d.m.y"),$id);
+                        mail($getapplication[0]['email'], "Агентство развития информационного общества РАРИО", "Добрый день," . $getapplication[0]['last_name'] ." ". $getapplication[0]['first_name'] ." ". $getapplication[0]['middle_name'] .
+                            ".\nЗаявка, с которой вы к нам обратились, отклонена.\nДля получения детальной информации обратитесь по номеру телефона: 8 (495) 627 6296.\n\n\n\nСообщение отправлено с сайта: http://rario.ru");
+                        header("location: http://rario/admin/applications");
+                        break;
+                }
             }
-            elseif ($_POST['status'] == "Поступила"){
-                header("location: http://rario/admin/applications");
-            }
-            else
-            {
-                $application->updateApplication($_POST['status'],'',$id);
-                header("location: http://rario/admin/applications");
-            }
-        }
         else{
             $this->view->generate('application_view.php', ['getapplication' => $getapplication]);
         }
